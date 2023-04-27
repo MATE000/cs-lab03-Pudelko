@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace PudelkoLibrary
 {
 
-    public sealed class Pudelko
+    public sealed class Pudelko : IFormattable, IEquatable<Pudelko>
     {
         //zadanie 1,2
 
@@ -126,12 +126,17 @@ namespace PudelkoLibrary
             return A.GetHashCode() + B.GetHashCode() + C.GetHashCode() + unit.GetHashCode();
         }
 
+        public string ToString(string? format, IFormatProvider? formatProvider)
+        {
+            return a.ToString(format, formatProvider);
+        }
+
         public static bool operator ==(Pudelko p1, Pudelko p2) => p1.Equals(p2);
         public static bool operator !=(Pudelko p1, Pudelko p2) => p1.Equals(p2);
 
+        //zadanie 8
 
-
-
+           
 
 
     }
