@@ -10,7 +10,6 @@
             Console.WriteLine(p2.Pole);
             Console.WriteLine(p2.Equals(p1));
 
-
         }
     }
 }
